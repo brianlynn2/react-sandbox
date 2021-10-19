@@ -27,14 +27,10 @@ export default class Form extends Component {
       'https://yciq2g0499.execute-api.us-east-2.amazonaws.com/mytest/',
       { key1: `${name}, ${message}` }
     );
-	setStatus("submitted request");
+	var p = document.getElementById("submitted request");
+	p.innerHtml = s;
   }
 
-
-	setStatus (s) {
-		var p = document.getElementById("status");
-		p.innerHtml = s;
-	}
 
 
   render() {
