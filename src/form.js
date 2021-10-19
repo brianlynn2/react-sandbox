@@ -31,7 +31,7 @@ export default class Form extends Component {
   }
 
 
-	function setStatus (s) {
+	setStatus (s) {
 		var p = document.getElementById("status");
 		p.innerHtml = s;
 	}
