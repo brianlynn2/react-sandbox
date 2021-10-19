@@ -27,6 +27,7 @@ export default class Form extends Component {
       'https://yciq2g0499.execute-api.us-east-2.amazonaws.com/mytest/',
       { key1: `${name}, ${message}` }
     );
+	alert("submitted request");
   }
 
   render() {
