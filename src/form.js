@@ -27,6 +27,7 @@ export default class Form extends Component {
       'https://yciq2g0499.execute-api.us-east-2.amazonaws.com/mytest/',
       { key1: `${name}, ${message}` }
     );
+	  alert("submit info");
 	var p = document.getElementById("status");
 	p.innerHtml = "submitted request";
   }
@@ -54,7 +55,7 @@ export default class Form extends Component {
           />
 
           <button type="submit">Send</button>
-	    <p id="status"></p>
+	    <p id="status">Ready</p>
         </form>
       </div>
     );
