@@ -26,12 +26,13 @@ export default class Form extends Component {
   async handleSubmit(event) {
     event.preventDefault();
     const { name, message } = this.state;
+    this.setState({stat : "Submitting"});
     await axios.post(
       'https://yciq2g0499.execute-api.us-east-2.amazonaws.com/mytest/',
       { key1: `${name}, ${message}` }
     );
 //	  alert("submit info");
-	  this.setState({stat : "Submitted info"});
+	  this.setState({stat : "Submitted info!", message : ""});
 	  var myObj = this;
 
 	  setTimeout( function() { myObj.setState({ stat : "Ready"}) }, 2000);
@@ -41,6 +42,7 @@ export default class Form extends Component {
 
 
   render() {
+    var mycolor = this.state.stat ==  "Submitting" ? "red" : "green";
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
@@ -61,7 +63,7 @@ export default class Form extends Component {
           />
 
           <button type="submit">Send</button>
-	    <p id="status">Status: {this.state.stat}</p>
+	    <p id="status" style={{color: mycolor }}>Status: {this.state.stat}</p>
         </form>
       </div>
     );
