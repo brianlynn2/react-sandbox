@@ -31,6 +31,7 @@ export default class Form extends Component {
 	  document.title = "Submitted request";
 	var p = document.getElementById("status");
 	p.innerHtml = "submitted request";
+	  render();
   }
 
 

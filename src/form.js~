@@ -28,6 +28,7 @@ export default class Form extends Component {
       { key1: `${name}, ${message}` }
     );
 	  alert("submit info");
+	  document.title = "Submitted request";
 	var p = document.getElementById("status");
 	p.innerHtml = "submitted request";
   }
