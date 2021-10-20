@@ -24,6 +24,7 @@ export default class Form extends Component {
   }
   async handleSubmit(event) {
     event.preventDefault();
+	  myStatus = "Submitting info";
     const { name, message } = this.state;
     await axios.post(
       'https://yciq2g0499.execute-api.us-east-2.amazonaws.com/mytest/',
