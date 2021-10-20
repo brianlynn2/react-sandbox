@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-var myStatus = "Ready";
+var myStatus = "Go ahead";
 
 export default class Form extends Component {
   constructor(props) {
@@ -32,9 +32,11 @@ export default class Form extends Component {
       { key1: `${name}, ${message}` }
     );
 //	  alert("submit info");
-	  myStatus = "Submitted info";
-	  this.render();
+	  this.myStatus = "Submitted info";
+
+	  //setTimeout(function() { myStatus = "ready"; }, 3000);
   }
+
 
 
 
