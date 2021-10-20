@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+var mySattus = "Ready";
+
 export default class Form extends Component {
   constructor(props) {
     super(props);
@@ -28,10 +30,7 @@ export default class Form extends Component {
       { key1: `${name}, ${message}` }
     );
 	  alert("submit info");
-	  const e = ( <p>Submitted Request</p> );
-	  //ReactDOM.render(e, document.getElementById("status"));
-	  document.getElementById("status").setInnerHTML("Hello");
-	  this.render();
+	  myStatus = "Submitted info";
   }
 
 
@@ -57,7 +56,7 @@ export default class Form extends Component {
           />
 
           <button type="submit">Send</button>
-	    <p id="status">Ready</p>
+	    <p id="status">(myStatus)</p>
         </form>
       </div>
     );
