@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-var myStatus = "Go ahead";
 
 export default class Form extends Component {
   constructor(props) {
@@ -9,6 +8,8 @@ export default class Form extends Component {
     this.state = {
       name: '',
       message: '',
+	stat: 'Ready now',
+	    timer: null
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -24,17 +25,16 @@ export default class Form extends Component {
   }
   async handleSubmit(event) {
     event.preventDefault();
-	  myStatus = "Submitting info";
-	  this.render();
     const { name, message } = this.state;
     await axios.post(
       'https://yciq2g0499.execute-api.us-east-2.amazonaws.com/mytest/',
       { key1: `${name}, ${message}` }
     );
 //	  alert("submit info");
-	  this.myStatus = "Submitted info";
+	  this.setState({stat : "Submitted info"});
+	  var myObj = this;
 
-	  //setTimeout(function() { myStatus = "ready"; }, 3000);
+	  setTimeout( function() { myObj.setState({ stat : "Ready"}) }, 2000);
   }
 
 
@@ -61,7 +61,7 @@ export default class Form extends Component {
           />
 
           <button type="submit">Send</button>
-	    <p id="status">Status: {myStatus}</p>
+	    <p id="status">Status: {this.state.stat}</p>
         </form>
       </div>
     );
