@@ -30,7 +30,7 @@ export default class Form extends Component {
 	  alert("submit info");
 	  const e = ( <p>Submitted Request</p> );
 	  //ReactDOM.render(e, document.getElementById("status"));
-	  document.getElementById("status").setOuterHTML(e);
+	  document.getElementById("status").setInnerHTML("Hello");
 	  this.render();
   }
 
