@@ -30,7 +30,7 @@ export default class Form extends Component {
       { key1: `${name}, ${message}` }
     );
 //	  alert("submit info");
-	  this.myStatus = "Submitted info";
+	  myStatus = "Submitted info";
 	  this.render();
   }
 
