@@ -30,7 +30,7 @@ export default class Form extends Component {
       { key1: `${name}, ${message}` }
     );
 //	  alert("submit info");
-	  this.myStatus = "Submitted info";
+	  myStatus = "Submitted info";
 	  this.render();
   }
 
@@ -57,7 +57,7 @@ export default class Form extends Component {
           />
 
           <button type="submit">Send</button>
-	    <p id="status">{this.myStatus}</p>
+	    <p id="status">{myStatus}</p>
         </form>
       </div>
     );
