@@ -31,6 +31,7 @@ export default class Form extends Component {
     );
 	  alert("submit info");
 	  myStatus = "Submitted info";
+	  this.render();
   }
 
 

@@ -57,7 +57,7 @@ export default class Form extends Component {
           />
 
           <button type="submit">Send</button>
-	    <p id="status">(myStatus)</p>
+	    <p id="status">(this,myStatus)</p>
         </form>
       </div>
     );
