@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-var mySattus = "Ready";
+var myStatus = "Ready";
 
 export default class Form extends Component {
   constructor(props) {
