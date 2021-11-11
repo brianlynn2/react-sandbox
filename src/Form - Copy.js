@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import AbsDisplay from './AbsDisplay.js';
-import DcfDisplay from './DcfDisplay.js';
 
 
 export default class Form extends Component {
@@ -19,7 +17,7 @@ export default class Form extends Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(event) {
+  handleChangeX(event) {
     const inputValue = event.target.value;
     const stateField = event.target.name;
     this.setState({
@@ -28,6 +26,27 @@ export default class Form extends Component {
     console.log(this.state);
   }
 
+  handleChange(event) {
+    event.preventDefault();
+    const inputValue = event.target.value;
+    const stateField = event.target.name;
+    this.setState({
+      [stateField]: inputValue,
+    });
+  var myObj = this;
+   // console.log(this.state);
+		  axios.post('https://quzruch6uh.execute-api.us-east-2.amazonaws.com/default/'
+			  ,  { abs_of :  `${inputValue}`  } 
+		  ).then((response) => { 
+			  //alert(JSON.stringify(response, null, "    "));  
+			  const resp = response.data;
+			  //alert("resp is " + resp);
+			  const result = JSON.parse(resp);
+			  //alert("parsed response");
+			  //alert (result.body);
+			  myObj.setState({ abs_result : result.body });
+		  }, (error) => { alert(error); } ); 
+  }
 
   async handleSubmit(event) {
     event.preventDefault();
@@ -73,18 +92,9 @@ export default class Form extends Component {
 
           <button type="submit">Send</button>
 	    <p id="status" style={{color: mycolor }}>Status: {this.state.stat}</p>
-	    </form>
-
-	    <hr/>
-	    <div class="border">
-		    <h3>Absolute Value </h3>
-		    <AbsDisplay />
-	    </div>
-	    <br/>
-	    <div class="border">
-		    <h3>Day Count Fraction</h3>
-		    <DcfDisplay />
-	    </div>
+	    <input type="number" name="abs_of" onChange={this.handleChange} value={this.state.abs_of} />
+        </form>
+	    <p>Absolute response:  {this.state.abs_result } </p>
 
           <button onClick={()=> {
 		  const myparams = "{ key1: 'aaa', key2: 'bbb', key3: 'ccc' }";
