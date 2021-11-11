@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/react-sandbox/static/css/main.21270962.chunk.css",
-    "main.js": "/react-sandbox/static/js/main.00180e06.chunk.js",
-    "main.js.map": "/react-sandbox/static/js/main.00180e06.chunk.js.map",
+    "main.css": "/react-sandbox/static/css/main.d5c188e1.chunk.css",
+    "main.js": "/react-sandbox/static/js/main.62916e8a.chunk.js",
+    "main.js.map": "/react-sandbox/static/js/main.62916e8a.chunk.js.map",
     "runtime-main.js": "/react-sandbox/static/js/runtime-main.ae2357f8.js",
     "runtime-main.js.map": "/react-sandbox/static/js/runtime-main.ae2357f8.js.map",
-    "static/js/2.63a1b711.chunk.js": "/react-sandbox/static/js/2.63a1b711.chunk.js",
-    "static/js/2.63a1b711.chunk.js.map": "/react-sandbox/static/js/2.63a1b711.chunk.js.map",
+    "static/js/2.352cb692.chunk.js": "/react-sandbox/static/js/2.352cb692.chunk.js",
+    "static/js/2.352cb692.chunk.js.map": "/react-sandbox/static/js/2.352cb692.chunk.js.map",
     "index.html": "/react-sandbox/index.html",
-    "static/css/main.21270962.chunk.css.map": "/react-sandbox/static/css/main.21270962.chunk.css.map",
-    "static/js/2.63a1b711.chunk.js.LICENSE.txt": "/react-sandbox/static/js/2.63a1b711.chunk.js.LICENSE.txt"
+    "static/css/main.d5c188e1.chunk.css.map": "/react-sandbox/static/css/main.d5c188e1.chunk.css.map",
+    "static/js/2.352cb692.chunk.js.LICENSE.txt": "/react-sandbox/static/js/2.352cb692.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.ae2357f8.js",
-    "static/js/2.63a1b711.chunk.js",
-    "static/css/main.21270962.chunk.css",
-    "static/js/main.00180e06.chunk.js"
+    "static/js/2.352cb692.chunk.js",
+    "static/css/main.d5c188e1.chunk.css",
+    "static/js/main.62916e8a.chunk.js"
   ]
 }
