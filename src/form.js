@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import AbsDisplay from './AbsDisplay.js';
 import DcfDisplay from './DcfDisplay.js';
+import CdmEnum from './CdmEnum.js';
 
 
 export default class Form extends Component {
@@ -85,6 +86,76 @@ export default class Form extends Component {
 		    <h3>Day Count Fraction</h3>
 		    <DcfDisplay />
 	    </div>
+	    <div class="border">
+	    <CdmEnum enum_name="cdm.base.datetime.BusinessDayConventionEnum" 
+		    label="Business Day Convention" 
+		    name="bdc" value={this.state.dcf} 
+		    ref="selectBDC" 
+	    	    change_handler={this.handleChange}
+		    />
+	    </div>
+	    <div class="border">
+	    <CdmEnum enum_name="cdm.base.datetime.BusinessCenterEnum" 
+		    label="Business Center" 
+		    name="bc" value={this.state.bc} 
+		    ref="selectBC" 
+	    	    change_handler={this.handleChange}
+		    />
+	    </div>
+
+	    <div class="border">
+	    <CdmEnum enum_name="cdm.base.datetime.DayOfWeekEnum" 
+		    label="Day of Week" 
+		    name="dow" value={this.state.dow} 
+		    ref="selectDOW" 
+	    	    change_handler={this.handleChange}
+		    />
+	    </div>
+
+	    <div class="border">
+	    <CdmEnum enum_name="cdm.base.datetime.PeriodEnum" 
+		    label="Period" 
+		    name="period" value={this.state.period} 
+		    ref="selectPeriod" 
+	    	    change_handler={this.handleChange}
+		    />
+	    </div>
+
+	    <div class="border">
+	    <CdmEnum enum_name="cdm.base.math.RoundingDirectionEnum" 
+		    label="Rounding Direction" 
+		    name="rounding" value={this.state.rounding} 
+		    ref="selectRounding" 
+	    	    change_handler={this.handleChange}
+		    />
+	    </div>
+
+	    <div class="border">
+	    <CdmEnum enum_name="cdm.base.math.WeatherUnitEnum" 
+		    label="Weather Unit" 
+		    name="weather_unit" value={this.state.weather_unit} 
+		    ref="selectWeatherUnit" 
+	    	    change_handler={this.handleChange}
+		    />
+	    </div>
+
+	    <div class="border">
+	    <CdmEnum enum_name="cdm.base.staticdata.asset.rates.FloatingRateIndexEnum" 
+		    label="Floating Rate Index" 
+		    name="fro" value={this.state.fro} 
+		    ref="selectFRO" 
+	    	    change_handler={this.handleChange}
+		    />
+	    </div>
+
+	    <div class="border">
+	    <CdmEnum enum_name="cdm.product.asset.IndexAnnexSource" 
+		    label="Index Annex Source" 
+		    name="ias" value={this.state.ias} 
+		    ref="selectIAS" 
+	    	    change_handler={this.handleChange}
+		    />
+	    </div>
 
           <button onClick={()=> {
 		  const myparams = "{ key1: 'aaa', key2: 'bbb', key3: 'ccc' }";
@@ -115,4 +186,3 @@ export default class Form extends Component {
     );
   }
 }
-		    //'Authorization' : 'Credential=AKIA2M6UVFUITMOKZS4B/20211103/us-east-2/execute-api/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=88803df63db877f85cddae6653a64ba705aacfcc5c7f9fc0e9af7941b729320f'

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import ApiComponent from './ApiComponent.js';
-import CdmEnum from './CdmEnum.js';
 
 
 export default class DcfDisplay extends ApiComponent {
@@ -24,7 +23,6 @@ export default class DcfDisplay extends ApiComponent {
     event.preventDefault();
     const inputValue = event.target.value;
     const stateField = event.target.name;
-	  //alert("input value is " + inputValue + " and state field is " + stateField);
 
     this.setState({
       [stateField]: inputValue,
@@ -83,12 +81,10 @@ initMenu() {
 	    </tr>
 	    </table>
 	    <br/>
-	    <CdmEnum enum_name="cdm.base.datetime.daycount.DayCountFractionEnum" 
-		    label="Day Count Frac" 
-		    name="dcf" value={this.state.dcf} ref="selectDcf"
-		    ref="selectDCF" 
-	    	    change_handler={this.handleChange}
-		    />
+	    <span>Day Count Fraction</span>
+		    <select  name="dcf" value={this.state.dcf} ref="selectDCF" onChange={this.handleChange}>
+	    { optlist }
+	    		</select>
 	    <br/>
 	    <br/>
 
